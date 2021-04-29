@@ -7,7 +7,10 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import TabThreeScreen from '../screens/TabThreeScreen';
+import TabFourScreen from '../screens/TabFourScreen';
+import TabFiveScreen from '../screens/TabFiveScreen';
+import { BottomTabParamList, TabOneParamList, TabTwoParamList, TabThreeParamList, TabFourParamList, TabFiveParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -19,20 +22,42 @@ export default function BottomTabNavigator() {
       initialRouteName="TabOne"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="TabOne"
+        name="Welcome"
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="Top Apps"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
       />
+        <BottomTab.Screen
+            name="My Car"
+            component={TabThreeNavigator}
+            options={{
+                tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+            }}
+        />
+        <BottomTab.Screen
+            name="Top Songs"
+            component={TabFourNavigator}
+            options={{
+                tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+            }}
+        />
+        <BottomTab.Screen
+            name="Top Games"
+            component={TabFiveNavigator}
+            options={{
+                tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+            }}
+        />
     </BottomTab.Navigator>
+
   );
 }
 
@@ -52,7 +77,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+        options={{ headerTitle: 'IT-227-A Project by Cory Ugone' }}
       />
     </TabOneStack.Navigator>
   );
@@ -66,8 +91,50 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{ headerTitle: 'IT-227-A Project by Cory Ugone' }}
       />
     </TabTwoStack.Navigator>
   );
+}
+
+const TabThreeStack = createStackNavigator<TabThreeParamList>();
+
+function TabThreeNavigator() {
+    return (
+        <TabThreeStack.Navigator>
+            <TabThreeStack.Screen
+                name="TabThreeScreen"
+                component={TabThreeScreen}
+                options={{ headerTitle: 'IT-227-A Project by Cory Ugone' }}
+            />
+        </TabThreeStack.Navigator>
+    );
+}
+
+const TabFourStack = createStackNavigator<TabFourParamList>();
+
+function TabFourNavigator() {
+    return (
+        <TabFourStack.Navigator>
+            <TabFourStack.Screen
+                name="TabFourScreen"
+                component={TabFourScreen}
+                options={{ headerTitle: 'IT-227-A Project by Cory Ugone' }}
+            />
+        </TabFourStack.Navigator>
+    );
+}
+
+const TabFiveStack = createStackNavigator<TabFiveParamList>();
+
+function TabFiveNavigator() {
+    return (
+        <TabFiveStack.Navigator>
+            <TabFiveStack.Screen
+                name="TabFiveScreen"
+                component={TabFiveScreen}
+                options={{ headerTitle: 'IT-227-A Project by Cory Ugone' }}
+            />
+        </TabFiveStack.Navigator>
+    );
 }

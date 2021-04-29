@@ -1,8 +1,11 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
-    "version": "1.0.0",
+    "name": "IT-227 Project",
+    "slug": "IT-227-Project",
+    "version": "1.0.1",
+    "privacy": "unlisted",
+    "description": "IT-227-A Final Project",
+    "githubUrl": "https://github.com/SirJacob/IT227-Project",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -10,7 +13,7 @@
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f8f4f4"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -24,7 +27,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#f8f4f4"
       }
     },
     "web": {
